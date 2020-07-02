@@ -1,5 +1,9 @@
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .about {
     min-height: 857px;
   }
+}
+
+@media (max-width: $tablet-width - 1px) {
+  
 }

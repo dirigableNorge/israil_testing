@@ -117,15 +117,59 @@ input[type="radio"].visually-hidden {
   color: white;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12); }
 
+.page-header__further-button {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  background-color: transparent;
+  background-image: url("../img/mouse.png");
+  background-repeat: no-repeat;
+  background-size: 17px 26px;
+  background-position: center;
+  border: 1px solid white;
+  border-radius: 50%; }
+  .page-header__further-button::before {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    width: 76px;
+    height: 76px;
+    border: 1px dashed white;
+    border-radius: 50%; }
+  .page-header__further-button::after {
+    content: "";
+    position: absolute;
+    bottom: -67px;
+    left: 50%;
+    width: 1px;
+    height: 55px;
+    background-color: white; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .page-header__further-button {
+      background-image: url("../img/mouse@2x.png"); } }
+
 @media (min-width: 1024px) {
   .page-header__book-call:hover, .page-header__book-call:focus {
     opacity: 0.75; }
   .page-header__book-call:active {
-    opacity: 0.5; } }
+    opacity: 0.5; }
+  .page-header__further-button {
+    cursor: pointer; }
+    .page-header__further-button:hover, .page-header__further-button:focus {
+      border-width: 2px; }
+      .page-header__further-button:hover::before, .page-header__further-button:focus::before {
+        top: -14px;
+        left: -14px;
+        width: 80px;
+        height: 80px; }
+      .page-header__further-button:hover::after, .page-header__further-button:focus::after {
+        bottom: -68px; } }
 
 @media (min-width: 768px) {
   .page-header {
-    min-height: 906px; }
+    min-height: 879px; }
   .page-header__top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -192,7 +236,36 @@ input[type="radio"].visually-hidden {
     font-size: 20px;
     line-height: 24px; } }
 
-@media (min-width: 1024px) {
+.page-main__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: #1fc0fc; }
+
+.page-main__text {
+  margin: 0;
+  color: #484848; }
+
+@media (min-width: 768px) {
+  .page-main__title {
+    font-size: 40px;
+    line-height: 49px; }
+  .page-main__text {
+    font-size: 17px;
+    line-height: 29px; } }
+
+@media (max-width: 767px) {
+  .page-main__title {
+    font-size: 32px;
+    line-height: 39px; }
+  .page-main__text {
+    font-size: 16px;
+    line-height: 26px; } }
+
+@media (min-width: 768px) {
   .about {
     min-height: 857px; } }
 
