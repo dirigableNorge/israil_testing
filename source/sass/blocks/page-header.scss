@@ -1,0 +1,127 @@
+.page-header {
+  background-image: url("../img/photo_girl.png"), url("../img/israel_bg.png"), url("../img/header_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 381px 609px, 1018px 340px, cover;
+  background-position: center top 159px, center 160px, center;
+
+  @media (min-resolution: $min-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/photo_girl@2x.png"), url("../img/israel_bg@2x.png") url("../img/header_bg@2x.jpg");
+  }
+}
+
+.page-header__phone,
+.page-header__book-call {
+  margin: 0;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: $dark;
+}
+
+.page-header__book-call {
+  border-bottom: 1px dashed $dark;
+}
+
+.page-header__description {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  color: white;
+
+  text-shadow: $text-shadow;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__book-call {
+    &:hover,
+    &:focus {
+      opacity: 0.75;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    min-height: 906px;
+  }
+
+  .page-header__top {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+  }
+
+  .page-header__phone {
+    margin-right: auto;
+  }
+
+  .page-header__book-call {
+    margin-left: auto;
+  }
+
+  .page-header__logo {
+    display: block;
+  }
+
+  .page-header__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 458px;
+  }
+
+  .page-header__description {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: $tablet-width - 1px) {
+  .page-header__top {
+    position: relative;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-top: 25px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 20px;
+    left: 16px;
+  }
+
+  .page-header__phone,
+  .page-header__book-call {
+    margin-left: auto;
+
+    font-size: 14px;
+    line-height: 17px;
+    text-align: right;
+  }
+
+  .page-header__phone {
+    margin-bottom: 8px;
+  }
+
+  .page-header__book-call {
+    display: block;
+  }
+
+  .page-header__bottom {
+    min-height: 619px;
+    padding-top: 272px;
+  }
+
+  .page-header__description {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
